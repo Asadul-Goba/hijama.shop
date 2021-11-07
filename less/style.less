@@ -10,6 +10,9 @@
 body{
 	background-color: @bg-color;
 }
+.container{
+	max-width: 1200px !important;
+}
 .header{
 	height: 80px;
 	background-color: @bg-color;
@@ -160,8 +163,30 @@ body{
 			}
 
 
+			.category-name{
+				h1{
+ 					font-size: 30px;
+ 					color:  @text-black;
+ 					margin-bottom: 	2rem;
+ 					margin-top: 1rem;	
 
+ 				}	
+ 			}
 			&__products{
+				.dostavka-text,.text-about{
+					p{
+						font-size: 18px;
+						color:@text-black;
+					}
+					
+				}
+				.images-about{
+					img{
+						height: 200px;
+						object-fit: contain;
+						background-position: right;			
+					}
+				}
 				.product-item{
 					background-color: #fff;
 					margin-bottom: 30px;

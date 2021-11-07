@@ -6,6 +6,9 @@ a {
 body {
   background-color: #f7f7f7;
 }
+.container {
+  max-width: 1200px !important;
+}
 .header {
   height: 80px;
   background-color: #f7f7f7;
@@ -114,6 +117,22 @@ li a {
 }
 .main-content .main-content__mainer__banner p {
   font-size: 16.5px;
+}
+.main-content .main-content__mainer .category-name h1 {
+  font-size: 30px;
+  color: #222222;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+.main-content .main-content__mainer__products .dostavka-text p,
+.main-content .main-content__mainer__products .text-about p {
+  font-size: 18px;
+  color: #222222;
+}
+.main-content .main-content__mainer__products .images-about img {
+  height: 200px;
+  object-fit: contain;
+  background-position: right;
 }
 .main-content .main-content__mainer__products .product-item {
   background-color: #fff;
