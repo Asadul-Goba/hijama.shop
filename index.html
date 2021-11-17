@@ -13,24 +13,26 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="
 	sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link rel="icon" href="img/title.png" >
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="ajax.js"></script>
 </head>
 <body>
 	<header class="header">
 		<div class="container">
 			<div class="header-content row">
-				<div class="header-content__logo col-lg-3">
+				<div class="header-content__logo col-lg-3 col-md-3 col-sm-8 col-6">
 					<span> <strong>H</strong>ijama<strong>S</strong>hop</span>
 				</div>
-				<div class="header-content__nav col-lg-7">
+				<div class="header-content__nav col-lg-7 col-md-6">
 				    <nav>
 				    		<a href="#">Главная</a>
 				    		<a href="О нас.html">О нас</a>
-				    		<a href="Контакты.html">Контактная информация</a>
+				    		<a href="Контакты.html">Контакты</a>
 								<a href="Доставка.html">Доставка</a>
 				    </nav>						
 				</div>
 
-				<div class="header-content__cart">
+				<div class="header-content__cart col-lg-2 col-md-3 col-sm-4 col-6" >
 					<div class="header-content__items" id="header-content__items" >
 						<button class="header-content__cart">
 							<i class="fas fa-shopping-cart"></i>
@@ -115,7 +117,7 @@
 		<div class="container">
 			<div class="main-content row">
 
-				<div class="main-content__lefter col-lg-3">
+				<div class="main-content__lefter col-lg-3 col-md-3">
 					<div class="main-content__lefter__categories">
 						<ul class="categories-ul">
 							<li class="green-li"><img src="img/list-text.png" alt=""> <a href="">Все категории</a></li>
@@ -128,9 +130,7 @@
 							<li><a href="">Натуральные препараты</a></li>
 							<li><a href="">Натуральные препараты</a></li>
 							<li><a href="">Натуральные препараты</a></li>
-							<li><a href="">Натуральные препараты</a></li>
-							<li><a href="">Натуральные препараты</a></li>
-							<li><a href="">Натуральные препараты</a></li>
+						
 						</ul>
 					</div>
 					<div class="main-content__lefter__bestsellers lefter-column">
@@ -190,10 +190,11 @@
 
 				</div>
 
-				<div class="main-content__mainer col-lg-9">
+				<div class="main-content__mainer col-lg-9 col-md-9 ">
 					<div class="main-content__mainer__banner">
-						<img src="img/banner.png" alt="" height="390px">
-						<p>
+						<img src="img/banner.png" alt="" >
+<!-- 						height="390px"
+ -->						<p>
 							В нашем интернет-магазине вы найдете товары для работы хиджамиста и не только
 							Эти товары подобрал лично я, Динислам Шайхитдинов, мы постоянно следим за качеством 
 							наших товаров и готовим и упаковываем их вручную. В нашем интернет-магазине вы 
@@ -203,7 +204,216 @@
 					</div>
 					<div class="main-content__mainer__products row menu-wrap rolls-wrap">
 
-						<div class="product-wrap col-lg-4 menu-wrap__item rolls-wrap__item js-product" data-product-name="Доктор тмин в упаковке" data-product-price="365" data-product-src="img/Доктор тмин.png">
+						<div class="product-wrap col-lg-4 col-md-4  col-sm-6 menu-wrap__item rolls-wrap__item js-product" data-product-name="Доктор тмин в упаковке" data-product-price="365" data-product-src="img/Доктор тмин.png">
+							<div class="product-item">
+								<img src="img/Доктор тмин.png" alt="Доктор тмин в упаковке">
+								<div class="product-item__caption">
+									<h3 class="product-name">Доктор тмин в упаковке</h3>
+									<p>Элитное масло черного тмина</p>
+									<span class="price js-cart-item-price">365 руб</span>
+									<button type="button" class="btn-product">В корзину</button>
+								</div>
+							</div>
+						</div>
+						<div class="product-wrap col-lg-4 col-md-4  col-sm-6 menu-wrap__item rolls-wrap__item js-product" data-product-name="Доктор тмин в упаковке" data-product-price="365" data-product-src="img/Доктор тмин.png">
+							<div class="product-item">
+								<img src="img/Доктор тмин.png" alt="Доктор тмин в упаковке">
+								<div class="product-item__caption">
+									<h3 class="product-name">Доктор тмин в упаковке</h3>
+									<p>Элитное масло черного тмина</p>
+									<span class="price js-cart-item-price">365 руб</span>
+									<button type="button" class="btn-product">В корзину</button>
+								</div>
+							</div>
+						</div>
+						<div class="product-wrap col-lg-4 col-md-4  col-sm-6 menu-wrap__item rolls-wrap__item js-product" data-product-name="Доктор тмин в упаковке" data-product-price="365" data-product-src="img/Доктор тмин.png">
+							<div class="product-item">
+								<img src="img/Доктор тмин.png" alt="Доктор тмин в упаковке">
+								<div class="product-item__caption">
+									<h3 class="product-name">Доктор тмин в упаковке</h3>
+									<p>Элитное масло черного тмина</p>
+									<span class="price js-cart-item-price">365 руб</span>
+									<button type="button" class="btn-product">В корзину</button>
+								</div>
+							</div>
+						</div>
+						<div class="product-wrap col-lg-4 col-md-4  col-sm-6 menu-wrap__item rolls-wrap__item js-product" data-product-name="Доктор тмин в упаковке" data-product-price="365" data-product-src="img/Доктор тмин.png">
+							<div class="product-item">
+								<img src="img/Доктор тмин.png" alt="Доктор тмин в упаковке">
+								<div class="product-item__caption">
+									<h3 class="product-name">Доктор тмин в упаковке</h3>
+									<p>Элитное масло черного тмина</p>
+									<span class="price js-cart-item-price">365 руб</span>
+									<button type="button" class="btn-product">В корзину</button>
+								</div>
+							</div>
+						</div>
+						<div class="product-wrap col-lg-4 col-md-4  col-sm-6 menu-wrap__item rolls-wrap__item js-product" data-product-name="Доктор тмин в упаковке" data-product-price="365" data-product-src="img/Доктор тмин.png">
+							<div class="product-item">
+								<img src="img/Доктор тмин.png" alt="Доктор тмин в упаковке">
+								<div class="product-item__caption">
+									<h3 class="product-name">Доктор тмин в упаковке</h3>
+									<p>Элитное масло черного тмина</p>
+									<span class="price js-cart-item-price">365 руб</span>
+									<button type="button" class="btn-product">В корзину</button>
+								</div>
+							</div>
+						</div>
+						<div class="product-wrap col-lg-4 col-md-4  col-sm-6 menu-wrap__item rolls-wrap__item js-product" data-product-name="Доктор тмин в упаковке" data-product-price="365" data-product-src="img/Доктор тмин.png">
+							<div class="product-item">
+								<img src="img/Доктор тмин.png" alt="Доктор тмин в упаковке">
+								<div class="product-item__caption">
+									<h3 class="product-name">Доктор тмин в упаковке</h3>
+									<p>Элитное масло черного тмина</p>
+									<span class="price js-cart-item-price">365 руб</span>
+									<button type="button" class="btn-product">В корзину</button>
+								</div>
+							</div>
+						</div>
+						<div class="product-wrap col-lg-4 col-md-4  col-sm-6 menu-wrap__item rolls-wrap__item js-product" data-product-name="Доктор тмин в упаковке" data-product-price="365" data-product-src="img/Доктор тмин.png">
+							<div class="product-item">
+								<img src="img/Доктор тмин.png" alt="Доктор тмин в упаковке">
+								<div class="product-item__caption">
+									<h3 class="product-name">Доктор тмин в упаковке</h3>
+									<p>Элитное масло черного тмина</p>
+									<span class="price js-cart-item-price">365 руб</span>
+									<button type="button" class="btn-product">В корзину</button>
+								</div>
+							</div>
+						</div>
+						<div class="product-wrap col-lg-4 col-md-4  col-sm-6 menu-wrap__item rolls-wrap__item js-product" data-product-name="Доктор тмин в упаковке" data-product-price="365" data-product-src="img/Доктор тмин.png">
+							<div class="product-item">
+								<img src="img/Доктор тмин.png" alt="Доктор тмин в упаковке">
+								<div class="product-item__caption">
+									<h3 class="product-name">Доктор тмин в упаковке</h3>
+									<p>Элитное масло черного тмина</p>
+									<span class="price js-cart-item-price">365 руб</span>
+									<button type="button" class="btn-product">В корзину</button>
+								</div>
+							</div>
+						</div>
+						<div class="product-wrap col-lg-4 col-md-4  col-sm-6 menu-wrap__item rolls-wrap__item js-product" data-product-name="Доктор тмин в упаковке" data-product-price="365" data-product-src="img/Доктор тмин.png">
+							<div class="product-item">
+								<img src="img/Доктор тмин.png" alt="Доктор тмин в упаковке">
+								<div class="product-item__caption">
+									<h3 class="product-name">Доктор тмин в упаковке</h3>
+									<p>Элитное масло черного тмина</p>
+									<span class="price js-cart-item-price">365 руб</span>
+									<button type="button" class="btn-product">В корзину</button>
+								</div>
+							</div>
+						</div>
+						<div class="product-wrap col-lg-4 col-md-4  col-sm-6 menu-wrap__item rolls-wrap__item js-product" data-product-name="Доктор тмин в упаковке" data-product-price="365" data-product-src="img/Доктор тмин.png">
+							<div class="product-item">
+								<img src="img/Доктор тмин.png" alt="Доктор тмин в упаковке">
+								<div class="product-item__caption">
+									<h3 class="product-name">Доктор тмин в упаковке</h3>
+									<p>Элитное масло черного тмина</p>
+									<span class="price js-cart-item-price">365 руб</span>
+									<button type="button" class="btn-product">В корзину</button>
+								</div>
+							</div>
+						</div>
+						<div class="product-wrap col-lg-4 col-md-4  col-sm-6 menu-wrap__item rolls-wrap__item js-product" data-product-name="Доктор тмин в упаковке" data-product-price="365" data-product-src="img/Доктор тмин.png">
+							<div class="product-item">
+								<img src="img/Доктор тмин.png" alt="Доктор тмин в упаковке">
+								<div class="product-item__caption">
+									<h3 class="product-name">Доктор тмин в упаковке</h3>
+									<p>Элитное масло черного тмина</p>
+									<span class="price js-cart-item-price">365 руб</span>
+									<button type="button" class="btn-product">В корзину</button>
+								</div>
+							</div>
+						</div>
+						<div class="product-wrap col-lg-4 col-md-4  col-sm-6 menu-wrap__item rolls-wrap__item js-product" data-product-name="Доктор тмин в упаковке" data-product-price="365" data-product-src="img/Доктор тмин.png">
+							<div class="product-item">
+								<img src="img/Доктор тмин.png" alt="Доктор тмин в упаковке">
+								<div class="product-item__caption">
+									<h3 class="product-name">Доктор тмин в упаковке</h3>
+									<p>Элитное масло черного тмина</p>
+									<span class="price js-cart-item-price">365 руб</span>
+									<button type="button" class="btn-product">В корзину</button>
+								</div>
+							</div>
+						</div>
+						<div class="product-wrap col-lg-4 col-md-4  col-sm-6 menu-wrap__item rolls-wrap__item js-product" data-product-name="Доктор тмин в упаковке" data-product-price="365" data-product-src="img/Доктор тмин.png">
+							<div class="product-item">
+								<img src="img/Доктор тмин.png" alt="Доктор тмин в упаковке">
+								<div class="product-item__caption">
+									<h3 class="product-name">Доктор тмин в упаковке</h3>
+									<p>Элитное масло черного тмина</p>
+									<span class="price js-cart-item-price">365 руб</span>
+									<button type="button" class="btn-product">В корзину</button>
+								</div>
+							</div>
+						</div>
+						<div class="product-wrap col-lg-4 col-md-4  col-sm-6 menu-wrap__item rolls-wrap__item js-product" data-product-name="Доктор тмин в упаковке" data-product-price="365" data-product-src="img/Доктор тмин.png">
+							<div class="product-item">
+								<img src="img/Доктор тмин.png" alt="Доктор тмин в упаковке">
+								<div class="product-item__caption">
+									<h3 class="product-name">Доктор тмин в упаковке</h3>
+									<p>Элитное масло черного тмина</p>
+									<span class="price js-cart-item-price">365 руб</span>
+									<button type="button" class="btn-product">В корзину</button>
+								</div>
+							</div>
+						</div>
+						<div class="product-wrap col-lg-4 col-md-4  col-sm-6 menu-wrap__item rolls-wrap__item js-product" data-product-name="Доктор тмин в упаковке" data-product-price="365" data-product-src="img/Доктор тмин.png">
+							<div class="product-item">
+								<img src="img/Доктор тмин.png" alt="Доктор тмин в упаковке">
+								<div class="product-item__caption">
+									<h3 class="product-name">Доктор тмин в упаковке</h3>
+									<p>Элитное масло черного тмина</p>
+									<span class="price js-cart-item-price">365 руб</span>
+									<button type="button" class="btn-product">В корзину</button>
+								</div>
+							</div>
+						</div>
+						<div class="product-wrap col-lg-4 col-md-4  col-sm-6 menu-wrap__item rolls-wrap__item js-product" data-product-name="Доктор тмин в упаковке" data-product-price="365" data-product-src="img/Доктор тмин.png">
+							<div class="product-item">
+								<img src="img/Доктор тмин.png" alt="Доктор тмин в упаковке">
+								<div class="product-item__caption">
+									<h3 class="product-name">Доктор тмин в упаковке</h3>
+									<p>Элитное масло черного тмина</p>
+									<span class="price js-cart-item-price">365 руб</span>
+									<button type="button" class="btn-product">В корзину</button>
+								</div>
+							</div>
+						</div>
+						<div class="product-wrap col-lg-4 col-md-4  col-sm-6 menu-wrap__item rolls-wrap__item js-product" data-product-name="Доктор тмин в упаковке" data-product-price="365" data-product-src="img/Доктор тмин.png">
+							<div class="product-item">
+								<img src="img/Доктор тмин.png" alt="Доктор тмин в упаковке">
+								<div class="product-item__caption">
+									<h3 class="product-name">Доктор тмин в упаковке</h3>
+									<p>Элитное масло черного тмина</p>
+									<span class="price js-cart-item-price">365 руб</span>
+									<button type="button" class="btn-product">В корзину</button>
+								</div>
+							</div>
+						</div>
+						<div class="product-wrap col-lg-4 col-md-4  col-sm-6 menu-wrap__item rolls-wrap__item js-product" data-product-name="Доктор тмин в упаковке" data-product-price="365" data-product-src="img/Доктор тмин.png">
+							<div class="product-item">
+								<img src="img/Доктор тмин.png" alt="Доктор тмин в упаковке">
+								<div class="product-item__caption">
+									<h3 class="product-name">Доктор тмин в упаковке</h3>
+									<p>Элитное масло черного тмина</p>
+									<span class="price js-cart-item-price">365 руб</span>
+									<button type="button" class="btn-product">В корзину</button>
+								</div>
+							</div>
+						</div>
+						<div class="product-wrap col-lg-4 col-md-4  col-sm-6 menu-wrap__item rolls-wrap__item js-product" data-product-name="Доктор тмин в упаковке" data-product-price="365" data-product-src="img/Доктор тмин.png">
+							<div class="product-item">
+								<img src="img/Доктор тмин.png" alt="Доктор тмин в упаковке">
+								<div class="product-item__caption">
+									<h3 class="product-name">Доктор тмин в упаковке</h3>
+									<p>Элитное масло черного тмина</p>
+									<span class="price js-cart-item-price">365 руб</span>
+									<button type="button" class="btn-product">В корзину</button>
+								</div>
+							</div>
+						</div>
+						<div class="product-wrap col-lg-4 col-md-4  col-sm-6 menu-wrap__item rolls-wrap__item js-product" data-product-name="Доктор тмин в упаковке" data-product-price="365" data-product-src="img/Доктор тмин.png">
 							<div class="product-item">
 								<img src="img/Доктор тмин.png" alt="Доктор тмин в упаковке">
 								<div class="product-item__caption">
@@ -215,119 +425,40 @@
 							</div>
 						</div>
 
-						<div class="product-wrap col-lg-4">
-							<div class="product-item">
-								<img src="img/Доктор тмин.png" alt="" >
-								<div class="product-item__caption">
-									<h3>Доктор тмин в упаковке</h3>
-									<p>Элитное масло черного тмина</p>
-									<span>365 руб</span>
-									<button>В корзину</button>
-								</div>
-							</div>
-						</div>
-
-						<div class="product-wrap col-lg-4">
-							<div class="product-item">
-								<img src="img/Доктор тмин.png" alt="" >
-								<div class="product-item__caption">
-									<h3>Доктор тмин в упаковке</h3>
-									<p>Элитное масло черного тмина</p>
-									<span>365 руб</span>
-									<button>В корзину</button>
-								</div>
-							</div>
-						</div>
-
-						<div class="product-wrap col-lg-4">
-							<div class="product-item">
-								<img src="img/Доктор тмин.png" alt="" >
-								<div class="product-item__caption">
-									<h3>Доктор тмин в упаковке</h3>
-									<p>Элитное масло черного тмина</p>
-									<span>365 руб</span>
-									<button>В корзину</button>
-								</div>
-							</div>
-						</div>
-
-						<div class="product-wrap col-lg-4">
-							<div class="product-item">
-								<img src="img/Доктор тмин.png" alt="" >
-								<div class="product-item__caption">
-									<h3>Доктор тмин в упаковке</h3>
-									<p>Элитное масло черного тмина</p>
-									<span>365 руб</span>
-									<button>В корзину</button>
-								</div>
-							</div>
-						</div>
-
-						<div class="product-wrap col-lg-4">
-							<div class="product-item">
-								<img src="img/Доктор тмин.png" alt="" >
-								<div class="product-item__caption">
-									<h3>Доктор тмин в упаковке</h3>
-									<p>Элитное масло черного тмина</p>
-									<span>365 руб</span>
-									<button>В корзину</button>
-								</div>
-							</div>
-						</div>
-
-						<div class="product-wrap col-lg-4">
-							<div class="product-item">
-								<img src="img/Доктор тмин.png" alt="" >
-								<div class="product-item__caption">
-									<h3>Доктор тмин в упаковке</h3>
-									<p>Элитное масло черного тмина</p>
-									<span>365 руб</span>
-									<button>В корзину</button>
-						
-							</div>
-						</div>
-
-						<div class="product-wrap col-lg-4">
-							<div class="product-item">
-								<img src="img/Доктор тмин.png" alt="" >
-								<div class="product-item__caption">
-									<h3>Доктор тмин в упаковке</h3>
-									<p>Элитное масло черного тмина</p>
-									<span>365 руб</span>
-									<button>В корзину</button>
-								</div>
-							</div>
-						</div>
-
-						<div class="product-wrap col-lg-4">
-							<div class="product-item">
-								<img src="img/Доктор тмин.png" alt="" >
-								<div class="product-item__caption">
-									<h3>Доктор тмин в упаковке</h3>
-									<p>Элитное масло черного тмина</p>
-									<span>365 руб</span>
-									<button>В корзину</button>
-								</div>
-							</div>
-						</div>						
 
 					</div>
 
-					<div class="main-content__mainer__pagination">
-						<button>
+					<div class="main-content__mainer__pagination after-posts">
+						<button class="load-more">
 							Увидеть больше
+							  <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
 						</button>
+
 					</div>	
 				</div>
 			</div>
 		</div>
 	</section>
-
+	<footer class="footer">
+		
+	</footer>
+	<script>
+		$(function(){
+			$(".product-wrap").slice(0,9).show();
+			$('.load-more').on('click', function(e){
+			 e.preventDefault();
+			 $(".product-wrap:hidden").slice(0,9).slideDown();
+			 if ($(".product-wrap:hidden").length == 0) {
+                $(".load-more").fadeOut('slow')
+            }
+				
+			});
+		});
+	</script>
 	<script src="js/jquery-min.js"></script>
 	<script src="js/cart3.js"></script>
-	<script src="js/bootstrap.bundle.min.js"></script>	
 	
-	<script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js" type="text/javascript"></script>
+	<script src="js/jquery.maskedinput.min.js"></script>
 
 	<script>
 		$("#tel").mask("+7(999) 999-99-99");
