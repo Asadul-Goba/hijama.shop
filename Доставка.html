@@ -7,55 +7,132 @@
 	<title>HIJAMA-SHOP</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Roboto:wght@500&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="
 	sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link rel="icon" href="img/title.png" >
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="ajax.js"></script>
 </head>
 <body>
 	<header class="header">
 		<div class="container">
 			<div class="header-content row">
-				<div class="header-content__logo col-lg-3">
-					<span> <strong>H</strong>ijama<strong>S</strong>hop</span>
+				<div class="header-content__logo col-lg-3 col-md-3 col-sm-8 col-6">
+					<a href="index.html" style="text-decoration: none;"><span><strong>H</strong>ijama<strong>S</strong>hop</span></a>
 				</div>
-				<div class="header-content__nav col-lg-7">
+				<div class="header-content__nav col-lg-7 col-md-6">
 				    <nav>
-				    		<a href="">Главная</a>
-				    		<a href="">О нас</a>
-				    		<a href="">Контактная информация</a>
-							<a href="">Доставка</a>
+				    		<a href="index.html">Главная</a>
+				    		<a href="О нас.html">О нас</a>
+				    		<a href="Контакты.html">Контакты</a>
+								<a href="Доставка.html">Доставка</a>
 				    </nav>						
 				</div>
-				<div class="header-content__cart col-lg-7">
-					
+
+				<div class="header-content__cart col-lg-2 col-md-3 col-sm-4 col-6" >
+					<div class="header-content__items" id="header-content__items" >
+						<button class="header-content__cart">
+							<i class="fas fa-shopping-cart"></i>
+							<p class="header-content__p js-cart-total-count-items"></p>
+						</button>
+						<p class="header-content__fullprice"><span class="js-cart-total-price-counter">0</span> ₽</p>
+					</div>	
+				</div>
+			</div>
+			<div class="cart">
+				<div class="cart-content cart-content-block" id="cart-content-none">
+					<h2 class="cart-content__title text-center">Корзина</h2>
+					<div class="cart-content-close" type="button">
+						<button class="cart-content-close__item"></button>
+					</div>
+
+					<ul class="cart-content__list js-cart">
+					</ul>
+					<div class="cart-content__bottom">
+						<div class="cart-content__fullprice">
+							<h5>Сумма заказа</h5>
+							<p class="fullprice"><span class="js-cart-total-price">0</span> ₽</p>
+						</div>
+						<button type="button" class="cart-content__btn order-btn">Оформить заказ</button>
+					</div>
 				</div>
 			</div>
 		</div>
 	</header>
+	<div class="modals">
+		<div class="modals__container">
+			<div class="modals-content order-modals__content cart-content">
+				<div class="order-modals__top">
+					<h2 class="order-modals__title cart-content__title text-center">Оформление заказа</h2>
+				</div>
+				<div class="cart-content-close" type="button">
+					<button class="cart-content-close__item"></button>
+				</div>
+				<div class="order-modals__info">
+					<p class="order-modals__info-item">Товаров в корзине <span class="js-cart-total-count-items-modals"> 0</span> шт.</p>
+					<div class="order-modals__summ order-modals__info-item">Общая сумма: <span class="js-cart-total-price-modals">0</span> ₽</div>
+					<div class="order-modals__products order-modals__info-item">
+						<ul class="order-modals__list js-modals">
+							<li class="order-modals__item">
+								<article class="order-modals__product order-product">
+									<img src="img/grecheskij.jpg"  class="order-product__img" alt="">	
+									<div class="order-product__text">
+										<div class="order-product__title">Ролл филадельфия</div>
+										<div class="order-product__price">299 ₽</div>
+									</div>
+									<div class="cart-product-delete ms-auto" type="button">
+										<button class="order-product__delete cart-product-delete__item" aria-label="Удалить товар" type="button"></button>
+									</div>
+								</article>
+							</li>
+						</ul>
+					</div>
+				</div>	
+				<form action="mail.php" class="order-modals__form order">
+					<input type="hidden" name="theme" value="Заявка с сайта">
+					<input type="hidden" name="admin_email[]" value="rajulshahsov@gmail.com">
+					<input type="hidden" name="form_subject" value="Заявка с сайта">
+					<label class="order__label">
+						<span class="order__text">Ваше имя</span>
+						<input type="text" name="Имя" class="order__input" placeholder="Имя" required>
+					</label>
+					<label class="order__label">
+						<span class="order__tel">Номер телефона</span>
+						<input type="tel" name="Телефон" id="tel" class="order__input" id="tel" placeholder="+7(999) 999-99-99" required>
+					</label>
+					<label class="order__label">
+						<span class="order__text">Город, район</span>
+						<input type="text" name="Куда доставить" class="order__input"  placeholder="Реутов"  required>
+					</label>
+					<button type="submit" class="order__btn cart-content__btn ms-auto" id="ok">Оформить заказ</button>			
+				</form>
+			</div>			
+		</div>
+	</div>
+
 	<section class="main">
 		<div class="container">
 			<div class="main-content row">
 
-				<div class="main-content__lefter col-lg-3">
+				<div class="main-content__lefter col-lg-3 col-md-3">
 					<div class="main-content__lefter__categories">
 						<ul class="categories-ul">
-							<li class="green-li"><img src="img/list-text.png" alt=""> <a href="">Все категории</a></li>
-							<li><a href="">Натуральные препараты</a></li>
-							<li><a href="">Натуральные препараты</a></li>
-							<li><a href="">Натуральные препараты</a></li>
-							<li><a href="">Натуральные препараты</a></li>
-							<li><a href="">Натуральные препараты</a></li>
-							<li><a href="">Натуральные препараты</a></li>
-							<li><a href="">Натуральные препараты</a></li>
-							<li><a href="">Натуральные препараты</a></li>
-							<li><a href="">Натуральные препараты</a></li>
-							<li><a href="">Натуральные препараты</a></li>
-							<li><a href="">Натуральные препараты</a></li>
-							<li><a href="">Натуральные препараты</a></li>
+							<li class="green-li"><img src="img/list-text.png" alt="" > <a href="">Все категории</a></li>
+							<li><a href="Натуральные препараты.html">Натуральные препараты</a></li>
+							<li><a href="Аксессуары и инструменты.html">Аксессуары и инструменты</a></li>
+							<li><a href="Свечи и мази.html">Свечи и мази</a></li>
+							<li><a href="Косметологическая хиджама.html">Косметологическая хиджама</a></li>
+							<li><a href="Натуральные препараты.html">Натуральные препараты</a></li>
+							<li><a href="Косметика и крема.html">Косметика и крема</a></li>
+							<li><a href="Мебель для хиджамы.html">Мебель для хиджамы</a></li>
+							<li><a href="Банки и насосы.html">Банки и насосы</a></li>
+							<li><a href="Зубные пасты.html">Зубные пасты</a></li>
+							
+
+						
 						</ul>
 					</div>
 
@@ -63,52 +140,70 @@
 
 
 
-					<div class="main-content__lefter__bestsellers lefter-column">
 
+
+
+
+					<div class="main-content__lefter__bestsellers lefter-column">
 						<li class="green-li"><a href="">Популярные товары</a></li>
 						<div class="bestsellers-content">
-							<div class="bestsellers-item">
-								<img src="img/Доктор тмин.png" alt="">
-								<div class="bestsellers-item__description">
-									<h4>Заживляющий крем</h4>
-									<p>Природный антибиотик</p>
-									<span>365 руб</span>
+							<a href="product/товар.html" class="bestsellers-a">
+						      	<div class="bestsellers-item">
+									<img src="img/Доктор тмин.png" alt="">
+									<div class="bestsellers-item__description">
+										<h4>Заживляющий крем</h4>
+										<p>Природный антибиотик</p>
+										<span>365 руб</span>
+									</div>
 								</div>
-							</div>
-							<div class="bestsellers-item">
-								<img src="img/Доктор тмин.png" alt="">
-								<div class="bestsellers-item__description">
-									<h4>Заживляющий крем</h4>
-									<p>Природный антибиотик</p>
-									<span>365 руб</span>
+							</a>
+							<a href="product/товар.html" class="bestsellers-a">
+						      	<div class="bestsellers-item">
+									<img src="img/Доктор тмин.png" alt="">
+									<div class="bestsellers-item__description">
+										<h4>Заживляющий крем</h4>
+										<p>Природный антибиотик</p>
+										<span>365 руб</span>
+									</div>
 								</div>
-							</div>
-							<div class="bestsellers-item">
-								<img src="img/Доктор тмин.png" alt="">
-								<div class="bestsellers-item__description">
-									<h4>Заживляющий крем</h4>
-									<p>Природный антибиотик</p>
-									<span>365 руб</span>
+							</a>													
+							<a href="product/товар.html" class="bestsellers-a">
+						      	<div class="bestsellers-item">
+									<img src="img/Доктор тмин.png" alt="">
+									<div class="bestsellers-item__description">
+										<h4>Заживляющий крем</h4>
+										<p>Природный антибиотик</p>
+										<span>365 руб</span>
+									</div>
 								</div>
-							</div>
-							<div class="bestsellers-item">
-								<img src="img/Доктор тмин.png" alt="">
-								<div class="bestsellers-item__description">
-									<h4>Заживляющий крем</h4>
-									<p>Природный антибиотик</p>
-									<span>365 руб</span>
+							</a>
+							<a href="product/товар.html" class="bestsellers-a">
+						      	<div class="bestsellers-item">
+									<img src="img/Доктор тмин.png" alt="">
+									<div class="bestsellers-item__description">
+										<h4>Заживляющий крем</h4>
+										<p>Природный антибиотик</p>
+										<span>365 руб</span>
+									</div>
 								</div>
-							</div>
-							<div class="bestsellers-item">
-								<img src="img/Доктор тмин.png" alt="">
-								<div class="bestsellers-item__description">
-									<h4>Заживляющий крем</h4>
-									<p>Природный антибиотик</p>
-									<span>365 руб</span>
+							</a>
+							<a href="product/товар.html" class="bestsellers-a">
+						      	<div class="bestsellers-item">
+									<img src="img/Доктор тмин.png" alt="">
+									<div class="bestsellers-item__description">
+										<h4>Заживляющий крем</h4>
+										<p>Природный антибиотик</p>
+										<span>365 руб</span>
+									</div>
 								</div>
-							</div>														
+							</a>
 						</div>
 					</div>
+
+					
+
+
+
 
 
 
@@ -121,6 +216,137 @@
 
 				</div>
 
+				<div class="main-content__mainer col-lg-9 col-md-9 ">
+
+					<div class="accordion accordion-flush" id="accordionFlushExample">
+					  <div class="accordion-item">
+					    <h2 class="accordion-header" id="flush-headingOne">
+					      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+					        <img src="img/list-text.png" alt=""> <a href="">Все категории</a>
+					      </button>
+					    </h2>
+					    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+					      <div class="accordion-body">
+					      	<ul>
+					      		<li><a href="Натуральные препараты.html">Натуральные препараты</a></li>
+								<li><a href="Аксессуары и инструменты.html">Аксессуары и инструменты</a></li>
+								<li><a href="Свечи и мази.html">Свечи и мази</a></li>
+								<li><a href="Косметологическая хиджама.html">Косметологическая хиджама</a></li>
+								<li><a href="Натуральные препараты.html">Натуральные препараты</a></li>
+								<li><a href="Косметика и крема.html">Косметика и крема</a></li>
+								<li><a href="Мебель для хиджамы.html">Мебель для хиджамы</a></li>
+								<li><a href="Банки и насосы.html">Банки и насосы</a></li>
+								<li><a href="Зубные пасты.html">Зубные пасты</a></li>
+							</ul>					
+					      </div>
+					    </div>
+					  </div>
+					  
+					</div>
+					<div class="main-content__mainer__products row menu-wrap rolls-wrap">
+						<div class="category-name col-lg-12">
+							<h1 class="category-name__h">
+								Контакты
+							</h1>
+						</div>
+						<div class="dostavka-text">
+							<p>
+								Свяжитесь с нами любым удобным способом:<br/>
+							<br/>
+							Телефоны
+							Наши операторы доступны пн-пт: с 9 до 18 по московскому времени<br/>
+							<br/>
+							8 (800) 51-130-51  бесплатно по России<br/>
+							8 (812) 458-09-01  Санкт-Петербург<br/>
+							8 (495) 146-67-61  Москва<br/>
+							8 (950) 036-2-036  Теле2<br/>
+							<br/>
+							Мессенджеры:<br/>
+							Написать в скайп Medbanki.ru<br/>
+							Написать в Viber [+7(950)036-20-36]<br/>
+							Написать в Whatsapp [+7(950)036-20-36]<br/>
+							<br/>
+							Электронная почта (email): sale(@)medbanki.ru<br/>
+							<br/>
+							Адрес офиса и склада: Санкт-Петербург, г. Пушкин, шоссе Подбельского, д. 9, литера А, пом. 1-Н, №№ 129 (143), 130 (142), 79, 81, 85 (163) (предварительный звонок обязателен)<br/>
+							<br/>
+							Социальные сети:<br/>
+							ВКонтакте<br/>
+							Фейсбук<br/>
+							<br/>
+							Если Вы уже оформили заказ с доставкой в пункт самовывоза и получили извещение о его прибытии, то <br/>можете обратиться непосредственно в выбранный пункт. Адреса наших пунктов самовывоза:<br/>
+							</p>
+						</div>
+						
+
+						
+
+
+					</div>
+
+
+					<div class="accordion accordion-bestsellers accordion-flush " id="accordionFlushExample">
+					  <div class="accordion-item">
+					    <h2 class="accordion-header" id="flush-headingOne">
+					      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+					        <a href="">Популярные товары</a>
+					      </button>
+					    </h2>
+					    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+					      <div class="accordion-body">
+					      	<a href="product/товар.html" class="bestsellers-a">
+						      	<div class="bestsellers-item">
+									<img src="img/Доктор тмин.png" alt="">
+									<div class="bestsellers-item__description">
+										<h4>Заживляющий крем</h4>
+										<p>Природный антибиотик</p>
+										<span>365 руб</span>
+									</div>
+								</div>
+							</a>
+							<a href="product/товар.html" class="bestsellers-a">
+						      	<div class="bestsellers-item">
+									<img src="img/Доктор тмин.png" alt="">
+									<div class="bestsellers-item__description">
+										<h4>Заживляющий крем</h4>
+										<p>Природный антибиотик</p>
+										<span>365 руб</span>
+									</div>
+								</div>
+							</a>
+							<a href="product/товар.html" class="bestsellers-a">
+						      	<div class="bestsellers-item">
+									<img src="img/Доктор тмин.png" alt="">
+									<div class="bestsellers-item__description">
+										<h4>Заживляющий крем</h4>
+										<p>Природный антибиотик</p>
+										<span>365 руб</span>
+									</div>
+								</div>
+							</a>
+							<a href="product/товар.html" class="bestsellers-a">
+						      	<div class="bestsellers-item">
+									<img src="img/Доктор тмин.png" alt="">
+									<div class="bestsellers-item__description">
+										<h4>Заживляющий крем</h4>
+										<p>Природный антибиотик</p>
+										<span>365 руб</span>
+									</div>
+								</div>
+							</a>
+							<a href="product/товар.html" class="bestsellers-a">
+						      	<div class="bestsellers-item">
+									<img src="img/Доктор тмин.png" alt="">
+									<div class="bestsellers-item__description">
+										<h4>Заживляющий крем</h4>
+										<p>Природный антибиотик</p>
+										<span>365 руб</span>
+									</div>
+								</div>
+							</a>	
+					      </div>
+					    </div>
+					  </div>
 
 
 
@@ -130,18 +356,117 @@
 
 
 
-				
+
+
+
+
+				</div>
 			</div>
 		</div>
 	</section>
+	<section class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="footer-contact col-lg-3 col-sm-6 col-12">
+					<div class="footer-contact__content">
+						<h5>
+							Контактная информация
+						</h5>
+						<p>Instagram:</p>
+						<p>Адрес:</p>
+						<p>Телефон: +8 (917) 455-24-41</p>
+						<p>+8 (917) 455-24-41</p>
+						<p>Email:</p>
+					</div>
+				</div>
+				<div class="footer-nav col-lg-3">
+					<h5>Категории товаров</h5>
+					<a href="Натуральные препараты.html">Натуральные препараты</a>
+					<a href="Аксессуары и инструменты.html">Аксессуары и инструменты</a>
+					<a href="Косметологическая хиджама.html">Косметологическая хиджама</a>
+					<a href="Натуральные препараты.html">Натуральные препараты</a>
+					<a href="Косметика и крема.html">Косметика и крема</a>
+					<a href="Мебель для хиджамы.html">Мебель для хиджамы</a>
+				</div>
+				<div class="footer-categories col-lg-3 col-sm-6 col-12">
+					<div class="footer-categories__content">
+						<h5>Навигация по сайту</h5>
+						<a href="index.html">Главная</a>
+						<a href="О нас.html">О нас</a>
+						<a href="Контакты.html">Контакты</a>
+						<a href="Доставка.html">Доставка</a>
+					</div>
+				</div>
+				<div class="footer-developer col-lg-3">
+					
+				</div>
+			</div>
+			</div>
+	</section>
+	<footer class="bottom">
+		<div class="container">
+			<div class="row">
+				<div class="follow-us col-lg-4 col-sm-4 col-12">
+					<p>Подписывайтесь на нас: instagram</p>
+				</div>
+				<div class="year col-lg-4 col-sm-4 col-12"> 
+					<p>© 2021-2022</p>
+				</div>
+				<div class="developer col-lg-4 col-sm-4 col-12">
+					<p>Разработка сайта: <a href="">IHSAN WEB</a></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script>
+		$(function(){
+			$(".product-wrap").slice(0,9).show();
+			$('.load-more').on('click', function(e){
+			 e.preventDefault();
+			 $(".product-wrap:hidden").slice(0,9).slideDown();
+			 if ($(".product-wrap:hidden").length == 0) {
+                $(".load-more").fadeOut('slow')
+            }
+				
+			});
+		});
+		$(function() {
+			 
+			$(window).scroll(function() {
+			 
+			if($(this).scrollTop() != 0) {
+			 
+			$('.btn-product').fadeIn();
+			 
+			} else {
+			 
+			$('.btn-product').fadeOut();
+			 
+			}
+			 
+			});
+			 
+			$('.btn-product').click(function() {
+			 
+			$('body,html').animate({scrollTop:0},50);
+			 
+			});
+			 
+		});
+		 
+	</script>
+	<script src="js/jquery-min.js"></script>
+	<script src="js/cart3.js"></script>
+	
+	<script src="js/jquery.maskedinput.min.js"></script>
 
+	<script>
+		$("#tel").mask("+7(999) 999-99-99");
+	</script>	
+	<script src="js/bootstrap.min.js"></script>
 
-
-
-
-
-
-
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+  </div>
+</div>
 </body>
 </html>

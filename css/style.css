@@ -2,6 +2,7 @@
 a {
   font-family: 'Nunito', sans-serif;
   color: #777777;
+  text-decoration: none;
 }
 body {
   background-color: #f7f7f7;
@@ -47,6 +48,7 @@ body {
   margin-bottom: 1.5rem;
 }
 .cart .cart-text button {
+  transition: 0.2s;
   display: block;
   padding: 0;
   border: 3px solid #58a93c;
@@ -58,6 +60,13 @@ body {
   font-weight: 600;
   background-color: transparent;
   margin-bottom: 1.5rem;
+}
+.cart .cart-text button:hover {
+  background-color: #E0E0E0;
+}
+.cart .cart-text button:focus {
+  background-color: #58a93c;
+  color: #fff;
 }
 .cart .cart-text p {
   display: block;
@@ -506,13 +515,14 @@ body {
   border-radius: 7px 7px 0 0;
   border: none;
   list-style-type: none;
+  border: none !important;
 }
 .green-li img {
   height: 20px;
 }
 .green-li a {
   padding-left: 0.5rem;
-  color: #FFF;
+  color: #FFF !important;
 }
 li {
   padding: 13.8px ;
@@ -538,7 +548,7 @@ li a {
   text-decoration: none;
 }
 .main-content__lefter__categories li:hover a {
-  color: #58a93c !important;
+  color: #58a93c;
 }
 .main-content__lefter__bestsellers {
   background-color: #fff;
@@ -723,6 +733,9 @@ li a {
   display: block;
   font-size: 16px;
 }
+.footer a:hover {
+  color: #58a93c;
+}
 .footer-contact p {
   margin: 0;
 }
@@ -780,6 +793,15 @@ footer .developer p {
   .main-content .product-item img {
     height: 190px;
     text-align: center;
+  }
+  .footer-nav {
+    display: none;
+  }
+  .footer-contact__content {
+    margin-left: 4rem;
+  }
+  .footer-categories__content {
+    margin-left: 4rem;
   }
   .header-content__nav a {
     font-size: 15px !important;
@@ -919,6 +941,15 @@ footer .developer p {
   }
 }
 @media (max-width: 768px) and (max-width: 576px) {
+  .footer-categories__content {
+    display: none;
+  }
+  .bottom .year,
+  .bottom .follow-us,
+  .bottom .developer p {
+    float: none;
+    text-align: center;
+  }
   .main-content .main-content__mainer__products .product-item {
     width: 310px !important;
   }

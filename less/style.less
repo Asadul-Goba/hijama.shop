@@ -6,6 +6,7 @@
 *, a{
 	font-family: 'Nunito', sans-serif;
 	color:@text-grey;
+	text-decoration: none;
 }
 body{
 	background-color: @bg-color;
@@ -58,6 +59,7 @@ body{
 			margin-bottom: 1.5rem;	
 		}
 		button{
+			transition:0.2s;
 			display: block;
 	        padding: 0;
 			border: 3px solid @green;
@@ -69,6 +71,14 @@ body{
 			font-weight: 600;
 		    background-color: transparent;
 		    margin-bottom: 1.5rem;	
+		}
+		button:hover{
+			background-color: #E0E0E0;
+			
+		}
+		button:focus{
+			background-color: @green;
+			color: #fff;
 		}
 		p{
 			display: block;
@@ -130,6 +140,7 @@ body{
 }
 // СТИЛИ ДЛЯ ГЛАВНОЙ
 .header {
+
 	button {
 		background: #fff;
 		border-radius: 12px;
@@ -580,16 +591,17 @@ body{
  	border-radius: 7px 7px 0 0;
  	border:none;
  	list-style-type: none;
+ 	border: none !important;
  	img{
  		height:20px;
  	}
  	a{
  		padding-left:0.5rem;
- 		color: #FFF;
+ 		color: #FFF !important;
  	}
 }
-li {
- 	// background-color:red;
+li{
+ 	
  	padding: 13.8px ;
  	border-bottom: 0.5px dashed #E7E7E7;
  	a{
@@ -625,7 +637,7 @@ li {
  			}
  			&__categories li:hover{
  				a{
- 					color: @green !important;
+ 					color: @green ;
  				}
  			}
  			&__bestsellers{
@@ -860,6 +872,9 @@ li {
 		display: block;
 		font-size: 16px;
 	}
+	a:hover{
+		color: @green;
+	}
 	&-contact{
 		p{
 			
@@ -950,6 +965,19 @@ footer{
 			}
 		}
 	}	
+	.footer-nav{
+		display: none; 
+	}
+	.footer-contact{
+		&__content{
+			margin-left: 4rem;
+		}
+	}
+	.footer-categories{
+		&__content{
+			margin-left: 4rem;
+		}
+	}
 	.header-content__nav{
 		a{
 			font-size: 15px !important;
@@ -1119,6 +1147,15 @@ footer{
 	}		
 }
 @media (max-width: 576px){
+	.footer-categories__content{
+		display: none;
+	}
+	.bottom{
+		.year,.follow-us,.developer p{
+			float: none;
+			text-align: center;
+		}
+	}
 			.main-content .main-content__mainer__products .product-item{
 				width: 310px !important;
     				img{
