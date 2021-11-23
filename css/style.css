@@ -610,6 +610,12 @@ li a {
   transition: 0.3s;
   text-decoration: none;
 }
+.main-content .main-content__mainer .accordion ul a:focus {
+  color: #58a93c !important;
+}
+.main-content .main-content__mainer .accordion .accordion-button:after {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
 .main-content .main-content__mainer__banner img {
   width: 100%;
   margin-bottom: 1rem;
@@ -972,17 +978,17 @@ footer .developer p {
     margin-bottom: 13px;
     color: #222222;
     font-weight: 600;
-    font-size: 18px !important;
+    font-size: 19.7px !important;
   }
   .main-content .main-content__mainer__products .product-item__caption button {
     display: block;
     padding: 0;
     border: 2px solid #EBEBEB;
     border-radius: 25px;
-    padding: 6px 18.5px;
+    padding: 7px 19.5px;
     font: inherit;
     color: #222222;
-    font-size: 18px !important;
+    font-size: 20px !important;
     font-weight: 600;
     background-color: transparent;
   }

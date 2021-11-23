@@ -719,9 +719,16 @@ li{
  							text-decoration: none;
 
  						}
+ 						
+ 					}
+ 					a:focus{
+ 						color: @green !important;
  					}
 
  				}
+ 				.accordion-button:after {
+  						background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+  				}
  			}
 			
 			&__banner{
@@ -1178,7 +1185,7 @@ footer{
 	    					margin-bottom: 13px;
 	    					color: @text-black;
 	    					font-weight: 600;
-	    					font-size: 18px !important;
+	    					font-size: 19.7px !important;
 
 	    				}
 	    				button{
@@ -1187,10 +1194,10 @@ footer{
 	    				    padding: 0;
 							border: 2px solid #EBEBEB;
 							border-radius: 25px;
-							padding: 6px 18.5px;
+							padding: 7px 19.5px;
 							font: inherit;
 							color: @text-black;
-							font-size: 18px !important;
+							font-size: 20px !important;
 							font-weight: 600;
 						    background-color: transparent;
 	    				}
